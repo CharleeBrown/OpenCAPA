@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCAPA", "OpenCAPA\OpenCAPA.csproj", "{1BB28F03-4DBA-4188-A60A-7D19451666EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCAPA_Engine", "OpenCAPA_Engine\OpenCAPA_Engine.csproj", "{02999E0E-255F-4404-B2CC-B53AD954A830}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1BB28F03-4DBA-4188-A60A-7D19451666EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BB28F03-4DBA-4188-A60A-7D19451666EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BB28F03-4DBA-4188-A60A-7D19451666EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02999E0E-255F-4404-B2CC-B53AD954A830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02999E0E-255F-4404-B2CC-B53AD954A830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02999E0E-255F-4404-B2CC-B53AD954A830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02999E0E-255F-4404-B2CC-B53AD954A830}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
