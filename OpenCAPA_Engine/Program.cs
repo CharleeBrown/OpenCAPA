@@ -6,4 +6,4 @@ Console.WriteLine("Hello, World!");
 //Console.WriteLine(Convert.ToString(aps.CAPA_ID));
 DataLayer data = new DataLayer();
 
-data.CreateCapaItem("Testing")
+data.CreateCapaItem("Testing", "This is a test to see if the comments work?");

@@ -53,7 +53,7 @@ namespace OpenCAPA_Engine
                     SqlCommand comms = new SqlCommand();
 
                     comms.Connection = conn;
-                    comms.CommandText = @"INSERT INTO CAPA_DATA VALUES (@CAPA, @Comment_)";
+                    comms.CommandText = @"INSERT INTO CAPA_DATA VALUES (@Title, @Descrip)";
                     comms.Parameters.AddWithValue("@Title", Title);
                     comms.Parameters.AddWithValue("@Descrip", Description);
 
@@ -63,20 +63,22 @@ namespace OpenCAPA_Engine
                 {
                     Console.Write(ex.ToString());
                 }
+
                 try
                 {
-                    SqlCommand comms = new SqlCommand();
+                    SqlCommand CommentCom = new SqlCommand();
 
-                    comms.Connection = conn;
-                    comms.CommandText = @"SELECT CAPA_ID FROM CAPA_DATA WHERE DESCRIP = @Descrip";
-                    comms.Parameters.AddWithValue("@Descrip", Description);
+                    CommentCom.Connection = conn;
+                    CommentCom.CommandText = @"SELECT CAPA_ID FROM CAPA_DATA WHERE DESCRIP = @Descrip";
+                    CommentCom.Parameters.AddWithValue("@Descrip", Description);
 
-                    SqlDataReader reader = comms.ExecuteReader();
+                    SqlDataReader reader = CommentCom.ExecuteReader();
                     while (reader.Read())
                     {
                         int CAPA = Convert.ToInt32(reader["CAPA_ID"]);
                         returnCAPA = CAPA;
                     }
+                    AddComment(Description, returnCAPA);
                 }
                 finally
                 {
@@ -84,7 +86,7 @@ namespace OpenCAPA_Engine
                 }
                
             }
-            AddComment("test", returnCAPA);
+           
 
         }
 
