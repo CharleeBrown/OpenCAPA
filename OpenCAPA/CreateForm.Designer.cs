@@ -38,6 +38,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -125,11 +128,42 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Comments";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(124, 472);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 34);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(127, 350);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(500, 112);
+            this.listView1.TabIndex = 19;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(296, 473);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(157, 32);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 528);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label4);
@@ -159,5 +193,8 @@
         private Label label4;
         private ComboBox comboBox3;
         private Label label5;
+        private Button button1;
+        private ListView listView1;
+        private Button button2;
     }
 }
