@@ -34,8 +34,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -92,33 +90,11 @@
             this.button6.Text = "View a CAPA Item";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button7
-            // 
-            this.button7.Enabled = false;
-            this.button7.Location = new System.Drawing.Point(49, 290);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(161, 29);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Enabled = false;
-            this.button8.Location = new System.Drawing.Point(49, 347);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(161, 29);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 450);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -140,7 +116,5 @@
         private Button button4;
         private Button button5;
         private Button button6;
-        private Button button7;
-        private Button button8;
     }
 }

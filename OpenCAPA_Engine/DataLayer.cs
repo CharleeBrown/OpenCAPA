@@ -8,13 +8,14 @@ namespace OpenCAPA_Engine
   
         public void AddComment(string Comment, int CAPA_ID)
         {
+            // Connection String
             string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
             
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 try
                 {
-
+                    // Opening the connection, creating the command, adding parameters.
                     conn.Open();
                     SqlCommand comms = new SqlCommand();
                     comms.Connection = conn;
@@ -22,7 +23,7 @@ namespace OpenCAPA_Engine
                     comms.Parameters.AddWithValue("@CAPA", CAPA_ID);
                     comms.Parameters.AddWithValue("@Comment_", Comment);
           
-
+                    // Executing the insert query.
                     comms.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -31,6 +32,7 @@ namespace OpenCAPA_Engine
                 }
                 finally
                 {
+                    // Closing the connection.
                     conn.Close();
                 }
 
@@ -42,14 +44,18 @@ namespace OpenCAPA_Engine
         
         public void CreateCapaItem(string Title, string Description)
         {
+            // Grabbing the connection string
             string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+
+            // Initializing the CAPA ID return variable
             int returnCAPA = 0;
+
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
                 try
                 {
-                    
+                 // Creating the command, inserting into the table   
                     SqlCommand comms = new SqlCommand();
 
                     comms.Connection = conn;
@@ -66,6 +72,8 @@ namespace OpenCAPA_Engine
 
                 try
                 {
+
+                    // While the connection is still open, execute this query.
                     SqlCommand CommentCom = new SqlCommand();
 
                     CommentCom.Connection = conn;
@@ -80,11 +88,13 @@ namespace OpenCAPA_Engine
                     }
                     AddComment(Description, returnCAPA);
                 }
-                finally
+                catch (Exception ex) 
                 {
-                    conn.Close();
+                    Console.Write(ex.Message);
                 }
-               
+                
+                    conn.Close();
+                               
             }
            
 
