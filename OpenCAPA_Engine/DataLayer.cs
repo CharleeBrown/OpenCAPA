@@ -1,9 +1,9 @@
 ﻿using Microsoft.Data.SqlClient;
-using OpenCAPA;
+
 
 namespace OpenCAPA_Engine
 {
-    internal class DataLayer
+    public class DataLayer
     {
   
         public void AddComment(string Comment, int CAPA_ID)
